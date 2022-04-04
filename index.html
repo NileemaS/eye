@@ -7,8 +7,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <script type="application/javascript" src="https://cdn.jsdelivr.net/gh/NileemaS/profile/profileFooter.js" defer></script>
-    <script src = "https://cdn.jsdelivr.net/gh/NileemaS/profile/profileHeader.js" type = "application/javascript" defer></script>    
-    <script src= "https://cdn.jsdelivr.net/gh/NileemaS/profile/search.js" type = "application/javascript"></script>></script>
+    <script src = "https://cdn.jsdelivr.net/gh/NileemaS/profile/profileHeader.js" type = "application/javascript" defer>
+    </script>    
+    <script src= "https://cdn.jsdelivr.net/gh/NileemaS/profile/search.js" type = "application/javascript"></script></script>
    
     <script src = "./eye.js" type = "application/javascript" defer></script> 
     <link rel = "stylesheet" href = "https://cdn.jsdelivr.net/gh/NileemaS/profile/styles.css">
@@ -24,7 +25,7 @@
         <header-comp class="header"> </header-comp> 
     </div>
      
-    <!--Main Center Div Start-->
+    <!--Main Left Div Start-->
     <div class = "main">
         <div id = "leftside" class = "divleft sidebar"> 
   	<span class="infoheader">More to Know</span>
@@ -32,17 +33,20 @@
        <div >
       <button id="div1" class="divimage" onclick="myFunction()">
       <span class="designtext" > How to Use</span>
+
       <div class="popup" >                      
       
-        <span class="popuptext" id="myPopup">  
-          <p>           
-          Eyes will follow the mouse movements.<br>
-          
-          OpenFullscreen button will make screen full size. 
-          
-          Please click 'Esc' to return from full size to normal size.
-          Click this popup again to close it.
-          </p>                   
+        <span class="popuptext" id="myPopup"> 
+          <h5>How to Use Eye Exercise</h5>
+          <div style="border-bottom: 2px black solid;"></div> 
+         
+          <ul style="margin:10px; padding:10px; text-align: justify;">
+            <li>To roll eyes, move mouse</li>
+            <li>To make screen full size, Click button OpenFullscreen</li>
+            <li>To exit full screen, press Esc </li>
+            <li>To exit this popup, Click anywhere inside this popup</li>
+          </ul> 
+                         
         </span>
       </div>
     </div>    
@@ -65,7 +69,7 @@
     </a>
   </div>      
   <div id="div5" class="divimage">
-    <a href= "../home/index.html">
+    <a href= "../profile/">
       <span class="designtext" > Contact</span>
     </a>
   </div>      
@@ -75,7 +79,14 @@
         <div  id = "center" class = "divcenter cntr">
 		<div style="padding-left: 10px; padding-bottom: 2px; display: flex; flex: 1;">
                     <img  src="https://cdn.jsdelivr.net/gh/NileemaS/profile/bb.gif.gif" alt="Bouncing Balls GIF" >
-                    <h3 style="margin-left: 20%; font-family:cursive; color:white;">Welcome to Eye Exercise </h3>   
+                    <h3 style="margin-left: 20%; font-family:cursive; color:white;">Welcome to Eye Exercise </h3>  
+                    
+                    <div style="margin-left: 100px; align-items: center;">
+                      <button onclick= "doFullScreen();">
+                        <span class="glyphicon glyphicon-fullscreen">
+                        </span>Open Fullscreen  
+                      </button>				
+                    </div>           
                 </div>
                                 
                 <div class="testcolor"></div>
@@ -86,9 +97,6 @@
               <span class="glyphicon glyphicon-resize-full"></span>Expand/ Reset Map 
             </button>		
           -->
-            <button onclick= "doFullScreen();">
-              <span class="glyphicon glyphicon-fullscreen"></span>Open Fullscreen  
-            </button>				
             <!--
             <button onclick="rmvFullScreen();">
               <span class="glyphicon glyphicon-fullscreen"></span>Close Fullscreen  

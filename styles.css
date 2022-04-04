@@ -262,28 +262,29 @@ body {font-family: "Lato", sans-serif;}
 .popup .popuptext {
   visibility: hidden;
   width: 700px;
+  height: 300px;
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  margin-left: -50px;
+  margin-top: -50px;
+  z-index: 10;
   background-color: #555;
   color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 20%;
-  margin-left: -80px;
+  border-radius: 6px;  
 }
 
 /* Popup arrow */
 .popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
+  content: ""; 
+  top: 50%;
   left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
+  margin-left: -50px;
+  margin-top: -50px;
+  z-index: 10;
+  border-width: 10px;
   border-style: solid;
-  border-color: #555 transparent transparent transparent;
+  border-color: #555;
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
