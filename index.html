@@ -1,0 +1,166 @@
+<html lang = "en">
+<head>
+        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script type="application/javascript" src="https://cdn.jsdelivr.net/gh/NileemaS/profile/profileFooter.js" defer></script>
+    <script src = "https://cdn.jsdelivr.net/gh/NileemaS/profile/profileHeader.js" type = "application/javascript" defer></script>    
+    <script src= "https://cdn.jsdelivr.net/gh/NileemaS/profile/search.js" type = "application/javascript"></script>></script>
+   
+    <script src = "./eye.js" type = "application/javascript" defer></script> 
+    <link rel = "stylesheet" href = "https://cdn.jsdelivr.net/gh/NileemaS/profile/styles.css">
+    <link rel = "stylesheet" href = "./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" 
+    rel="stylesheet">
+
+    <title> Eye </title>   
+</head>
+
+<body>  
+    <div>
+        <header-comp class="header"> </header-comp> 
+    </div>
+     
+    <!--Main Center Div Start-->
+    <div class = "main">
+        <div id = "leftside" class = "divleft sidebar"> 
+  	<span class="infoheader">More to Know</span>
+  	
+       <div >
+      <button id="div1" class="divimage" onclick="myFunction()">
+      <span class="designtext" > How to Use</span>
+      <div class="popup" >                      
+      
+        <span class="popuptext" id="myPopup">  
+          <p>           
+          Eyes will follow the mouse movements.<br>
+          
+          OpenFullscreen button will make screen full size. 
+          
+          Please click 'Esc' to return from full size to normal size.
+          Click this popup again to close it.
+          </p>                   
+        </span>
+      </div>
+    </div>    
+                                 
+<div id="div2" class="divimage">             
+  <a href= "../profile/index.html"> 
+    <span class="designtext" > Home</span>
+  </a>
+</div>
+    
+		
+  <div id="div3" class="divimage">
+    <a href= "../eye/README.md"> 
+      <span class="designtext" >GitHub ReadMe</span>
+    </a>
+  </div>
+  <div id="div4" class="divimage">
+    <a href= "../eye/LICENSE">
+      <span class="designtext" > License</span>
+    </a>
+  </div>      
+  <div id="div5" class="divimage">
+    <a href= "../home/index.html">
+      <span class="designtext" > Contact</span>
+    </a>
+  </div>      
+  
+</div>
+	<!--Center main Div -->
+        <div  id = "center" class = "divcenter cntr">
+		<div style="padding-left: 10px; padding-bottom: 2px; display: flex; flex: 1;">
+                    <img  src="https://cdn.jsdelivr.net/gh/NileemaS/profile/bb.gif.gif" alt="Bouncing Balls GIF" >
+                    <h3 style="margin-left: 20%; font-family:cursive; color:white;">Welcome to Eye Exercise </h3>   
+                </div>
+                                
+                <div class="testcolor"></div>
+         
+            
+              <!--  
+            <button onclick="togglescreen();">
+              <span class="glyphicon glyphicon-resize-full"></span>Expand/ Reset Map 
+            </button>		
+          -->
+            <button onclick= "doFullScreen();">
+              <span class="glyphicon glyphicon-fullscreen"></span>Open Fullscreen  
+            </button>				
+            <!--
+            <button onclick="rmvFullScreen();">
+              <span class="glyphicon glyphicon-fullscreen"></span>Close Fullscreen  
+            </button>				
+          -->
+
+          <div class="eyes">
+            <div class="eye">
+              <div class="ball"></div>
+            </div>
+            <div class="eye">
+              <div class="ball"></div>
+            </div>
+          </div>
+        </div>    
+
+        <div id = "rightside" class = "divright"> AD: 
+            <div><img src = "https://cdn.jsdelivr.net/gh/NileemaS/profile/doll.jpg" alt="Doll Image" class="adsize"></div>
+            <div> <img src = "https://cdn.jsdelivr.net/gh/NileemaS/profile/ballarrangement.jpg" alt="Ball Arrangement" class="adsize"></div>
+            <div><img src = "https://cdn.jsdelivr.net/gh/NileemaS/profile/qrcode.jpeg" alt = "QR Code" class="adsize"></div>
+            <div><img src = "https://cdn.jsdelivr.net/gh/NileemaS/profile/frenchie.jpg" alt = "Frenchie" class="adsize"></div>
+        </div>
+    </div>
+
+    <footer-comp> </footer-comp>
+
+  </body>
+
+  <script> 
+      
+      document.onmousemove = () => {
+        var x = (event.clientX * 100) / window.innerWidth + "%";
+        var y = (event.clientY * 100) / window.innerHeight + "%";
+
+        rollEyes(x, y);
+      };
+
+      /*
+      function togglescreen() {
+	      var elem = document.getElementById("center"); 
+	      elem.classList.toggle("maptog");
+      }
+      */
+      function doFullScreen() {
+	        /* View in fullscreen */
+	      var elem = document.getElementById("center");
+      	if (elem.requestFullscreen) {
+		      elem.requestFullscreen();
+	      } else if (elem.webkitRequestFullscreen) { /* Safari */
+		      elem.webkitRequestFullscreen();
+	      } else if (elem.msRequestFullscreen) { /* IE11 */
+		      elem.msRequestFullscreen();
+	      }
+      }
+
+      /* Close fullscreen 
+      function rmvFullscreen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) { 
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { 
+            document.msExitFullscreen();
+        }
+      }
+      */
+	 // When the user clicks on <div>, open the popup
+ function myFunction() {
+   var popup = document.getElementById("myPopup");
+   popup.classList.toggle("show");
+ }
+	  
+  </script>
+
+</html>
